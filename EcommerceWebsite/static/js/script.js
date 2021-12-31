@@ -52,9 +52,10 @@ $(document).ready(function() {
 	} // end if
 
 
-
-
     
 }); 
 // jquery end
 
+setTimeout(function(){
+    $('#message').fadeOut();
+}, 4000);
