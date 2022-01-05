@@ -42,7 +42,7 @@ class Order(models.Model):
     status          = models.CharField(max_length=10, choices=STATUS, default='New')
     ip              = models.CharField(max_length=20, blank=True)
     is_ordered      = models.BooleanField(default=False)
-    create_at       = models.DateTimeField(auto_now_add=True)
+    created_at       = models.DateTimeField(auto_now_add=True)
     updated_at      = models.DateTimeField(auto_now=True)
 
     def full_name(self):
@@ -59,9 +59,7 @@ class OrderProduct(models.Model):
     payment         = models.ForeignKey(Payment, on_delete=models.SET_NULL, blank=True, null=True)
     user            = models.ForeignKey(Account, on_delete=models.CASCADE)
     product         = models.ForeignKey(Product, on_delete=CASCADE)
-    variation       = models.ForeignKey(Variation, on_delete=models.CASCADE)
-    color           = models.CharField(max_length=50)
-    size            = models.CharField(max_length=50)
+    variations      = models.ManyToManyField(Variation, blank=True)
     quantity        = models.IntegerField()
     product_price   = models.FloatField()
     ordered         = models.BooleanField(default=False)
