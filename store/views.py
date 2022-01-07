@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Product, ReviewRating
+from .models import Product, ReviewRating, ProductGallery
 from category.models import Category
 from orders.models import OrderProduct
 from carts.views import _cart_id
@@ -51,17 +51,20 @@ def product_detail(request, category_slug, product_slug):
             orderproduct = None
     else:
         orderproduct = None
+
     # Get the Reviews of each product
     reviews = ReviewRating.objects.filter(product_id=single_product.id, status=True)
 
+    # Get the Product Gallery
+    product_gallery = ProductGallery.objects.filter(product_id=single_product.id)
 
     context= {
-        'single_product': single_product,
-        'in_cart'       : in_cart,
-        'orderproduct'  : orderproduct,
-        'reviews'       : reviews,
+        'single_product'    : single_product,
+        'in_cart'           : in_cart,
+        'orderproduct'      : orderproduct,
+        'reviews'           : reviews,
+        'product_gallery'   : product_gallery,
     }
-
     return render(request, 'store/product_detail.html', context)
 
 def search(request):

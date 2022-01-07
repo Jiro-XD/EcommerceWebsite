@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.deletion import CASCADE
 from django.db.models.fields import BooleanField
 from category.models import Category
 from django.urls import reverse
@@ -64,15 +65,26 @@ class Variation(models.Model):
         return self.variation_value
 
 class ReviewRating(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    user = models.ForeignKey(Account, on_delete=models.CASCADE)
-    subject = models.CharField(max_length=100, blank=True)
-    review = models.TextField(max_length=500, blank=True)
-    rating = models.FloatField()
-    ip = models.CharField(max_length=20, blank=True)
-    status = models.BooleanField(default=True)
-    created_date = models.DateTimeField(auto_now_add=True)
-    updated_date = models.DateTimeField(auto_now=True)
+    product         = models.ForeignKey(Product, on_delete=models.CASCADE)
+    user            = models.ForeignKey(Account, on_delete=models.CASCADE)
+    subject         = models.CharField(max_length=100, blank=True)
+    review          = models.TextField(max_length=500, blank=True)
+    rating          = models.FloatField()
+    ip              = models.CharField(max_length=20, blank=True)
+    status          = models.BooleanField(default=True)
+    created_date    = models.DateTimeField(auto_now_add=True)
+    updated_date    = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.subject
+
+class ProductGallery(models.Model):
+    product = models.ForeignKey(Product, default=None, on_delete=CASCADE)
+    image   = models.ImageField(upload_to='store/products', max_length=255)
+
+    def __str__(self):
+        return self.product.product_name
+
+    class Meta:
+        verbose_name        = 'productgallery'
+        verbose_name_plural = 'product gallery'

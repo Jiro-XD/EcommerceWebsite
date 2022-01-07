@@ -30,6 +30,17 @@
                         <figcaption class="info-wrap">
                             <a href="{{ product.get_url }}" class="title">{{ product.product_name }}</a>
                             <div class="price mt-1">R {{ product.price }}</div> <!-- price-wrap.// -->
+                            <!--Average Rating-->
+                            <div class="rating-star">
+                                <span>
+                                    <i class="fa fa-star{% if product.averageReview == None or product.averageReview < 0.5 %}-o{% elif product.averageReview >= 0.5 and product.averageReview < 1 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if product.averageReview == None or product.averageReview < 1.5 %}-o{% elif product.averageReview >= 1.5 and product.averageReview < 2 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if product.averageReview == None or product.averageReview < 2.5 %}-o{% elif product.averageReview >= 2.5 and product.averageReview < 3 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if product.averageReview == None or product.averageReview < 3.5 %}-o{% elif product.averageReview >= 3.5 and product.averageReview < 4 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if product.averageReview == None or product.averageReview < 4.5 %}-o{% elif product.averageReview >= 4.5 and product.averageReview < 5 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <span>{{product.countReview}} reviews</span>
+                                    </span>
+                            </div>
                             <a href="{{ product.get_url }}" class="btn btn-outline-primary">View Details</a>
                         </figcaption>
                         
