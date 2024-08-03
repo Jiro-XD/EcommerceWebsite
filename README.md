@@ -10,18 +10,16 @@ This project is a fully functional eCommerce application built using the Django 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [Contact](#contact)
 
 ## Features
 
+- Product Management
 - Custom User Model, Category & Media Files
 - Rating and Review System
 - Session Keys, Increment/Decrement/Remove Cart Items
-- Product Management
 - Context Processors & Product Details
-- Git Setup and Cart Functionality
-- Bug Fixes & Context Processor for Cart Item Counter
+- Cart Functionality
+- Context Processor for Cart Item Counter
 - Paginator & Search
 - Product Variations & Variation Manager
 - Adding Variations in Cart, Grouping Cart Item Variations
@@ -120,14 +118,48 @@ These instructions will get you a copy of the project up and running on your loc
 ## Screenshots
 
 ### Home Page
-![Screenshot1](projectImages/Image-1.png)
-![Screenshot1](projectImages/image-2.png)
+![Screenshot1](ProjectImages/img1.png)
+
 
 ### Store Page
-![Screenshot1](projectImages/image-3.png)
+![Screenshot1](ProjectImages/img8.png)
+![Screenshot1](ProjectImages/img9.png)
+
+
+### Login/Registration
+![Screenshot1](ProjectImages/img2.png)
+
+![Screenshot1](ProjectImages/img3.png)
+
+![Screenshot1](ProjectImages/img12.png)
+
+![Screenshot1](ProjectImages/img13.png)
+
+![Screenshot1](ProjectImages/img14.png)
+
+![Screenshot1](ProjectImages/img18.png)
+
+
+### User Dashboard/Profile
+![Screenshot1](ProjectImages/img4.png)
+
+![Screenshot1](ProjectImages/img5.png)
+
+![Screenshot1](ProjectImages/img6.png)
+
+
+### Cart Page
+![Screenshot1](ProjectImages/img10.png)
+
 
 ### Checkout Page
-![Screenshot1](projectImages/image-4.png)
+![Screenshot1](ProjectImages/img11.png)
 
-### Contact Page
-![Screenshot1](projectImages/image-5.png)
+
+### Place Order & Payment Page
+![Screenshot1](ProjectImages/img15.png)
+
+![Screenshot1](ProjectImages/img16.png)
+
+![Screenshot1](ProjectImages/img17.png)
+
