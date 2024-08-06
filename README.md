@@ -1,6 +1,16 @@
 # Django eCommerce Application
 
-This project is a fully functional eCommerce application built using the Django framework. It includes a wide range of features necessary for running an online store, from user authentication and product management to cart functionalities and payment gateway integration.
+This project is a fully functional eCommerce application built using the Django framework. It includes a comprehensive range of features essential for running an online store, such as:
+
+- User Authentication: Secure login and registration system with token-based verification.
+- Product Management: Admin interface for managing products, categories, and variations.
+- Cart Functionalities: Add to cart, update quantities, and manage cart items.
+- Payment Gateway Integration: Seamless payment processing to facilitate online transactions.
+- Order Management: Order number generation, order tracking, and user order history.
+- Review and Rating System: Users can leave reviews and ratings for products they have purchased.
+- Enhanced Security Measures: Implemented various security practices to protect user data and transactions.
+
+I built this website following the Udemy course Python Django Ecommerce | Advanced Django Web App. This project demonstrates my ability to develop complex web applications, implement various functionalities, and integrate third-party services, making it a significant addition to my portfolio.
 
 ## Table of Contents
 
